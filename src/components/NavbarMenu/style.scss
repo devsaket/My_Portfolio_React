@@ -1,0 +1,44 @@
+.nav-brand {
+    padding: 12px 21px 11px 10px !important;
+    font-family: BlackJack !important;
+    letter-spacing: -3px !important;
+
+    &:hover {
+        color: #1054f2 !important;
+    }
+}
+
+.menu-item:hover {
+    border-bottom: solid 0.1rem #1054f2 !important;
+    color: #1054f2 !important;
+}
+
+.facebook {
+    color: #1054f2 !important;
+}
+
+.twitter {
+    color: #1DA1F2 !important;
+}
+
+.linkedin {
+    color: #0077B5 !important;
+}
+
+.github {
+    color: #171515 !important;
+}
+
+.social-icon:hover {
+    color: black !important;
+}
+
+.moonstar {
+    padding: 10px 15px !important;
+
+    &:hover {
+        background-color: #171515 !important;
+        color: #fff !important;
+        padding: 10px 15px !important;
+    }
+}

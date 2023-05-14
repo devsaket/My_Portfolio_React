@@ -1,0 +1,96 @@
+.servicecard {
+    position: relative;
+    overflow: hidden;
+    height: 40vh !important;
+
+    .layer {
+        z-index: 1;
+        position: absolute;
+        top: calc(100% - 2px);
+        height: 100%;
+        width: 100%;
+        left: 0;
+        background: linear-gradient(to top, #ffa60099, #ff634799);
+        transition: 0.5s;
+    }
+
+    &:hover .layer {
+        top: 0;
+    }
+    &:hover .cardbody{
+        z-index: 2;
+    }
+
+    
+    .cardhead{
+        letter-spacing: 0.08rem;
+    }
+    .cardpara{
+        letter-spacing: .05rem;
+    }
+
+}
+
+.cardwebdesign {
+    background-color: #14B3C9 !important;
+}
+
+.cardwebdev {
+    background-color: #00A18F !important;
+}
+
+.cardwebapp {
+    background-color: #e468a2 !important;
+}
+
+.cardecomm {
+    background-color: #895EE4 !important;
+}
+
+.cardfed {
+    background-color: #ef476f !important;
+}
+
+.cardbed {
+    background-color: #29825d !important;
+}
+
+.cardwd {
+    background-color: #0e525a !important;
+}
+
+.cardwm {
+    background-color: #118ab2 !important;
+}
+
+.carddm {
+    background-color: #7e2e84 !important;
+}
+
+.cardseo {
+    background-color: #d14081 !important;
+}
+
+.cardsmm {
+    background-color: #ef798a !important;
+}
+
+.cardorm {
+    background-color: #5d9149 !important;
+}
+
+.cardgd {
+    background-color: #006494 !important;
+}
+
+.cardld {
+    background-color: #ee6352 !important;
+}
+
+.cardui {
+    background-color: #2fc876 !important;
+}
+
+.cardtt {
+    background-color: #4c5760 !important;
+}

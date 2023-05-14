@@ -1,0 +1,22 @@
+
+@font-face {
+  font-family: BlackJack;
+  src: local("BlackJack"), url("./fonts/BlackJack.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Craftsman;
+  src: local("Craftsman"), url("./fonts/Craftsman.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Quebecks;
+  src: local("Quebecks"), url("./fonts/Quebecks.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Quebecks !important;
+}
+

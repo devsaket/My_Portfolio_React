@@ -1,0 +1,14 @@
+.mypic {
+    height: 86vh !important;
+}
+
+.resumebtn {
+    font-family: BlackJack !important;
+    letter-spacing: 0.16rem;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #11d4ba !important;
+        color: white !important;
+    }
+}
