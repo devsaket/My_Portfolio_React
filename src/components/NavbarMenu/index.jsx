@@ -1,17 +1,19 @@
 import React from 'react';
 
 import {Container, Nav, Navbar} from 'react-bootstrap';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithubAlt } from 'react-icons/fa'
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithubAlt, FaUserClock } from 'react-icons/fa'
+import {MdContactPhone} from 'react-icons/md'
+import {FcHome, FcBusinessman, FcPositiveDynamic, FcMindMap, FcCustomerSupport} from 'react-icons/fc'
 import { BsMoonStarsFill } from 'react-icons/bs'
 
 import './style.scss'
 
 const navigation = [
-  { name: 'Home', href: '/', current: true, style: 'text-dark border-bottom border-dark fs-4 mx-1 pb-0 menu-item' },
-  { name: 'About', href: '/about', current: false, style: 'text-dark fs-4 mx-1 pb-0 menu-item' },
-  { name: 'Projects', href: '#', current: false,style: 'text-dark fs-4 mx-1 pb-0 menu-item' },
-  { name: 'Services', href: '/services', current: false, style: 'text-dark fs-4 mx-1 pb-0 menu-item' },
-  { name: 'Contact', href: '/contact', current: false, style: 'text-dark fs-4 mx-1 pb-0 menu-item' },
+  { name: <FcHome />, href: '/', current: true, style: 'text-dark border-bottom border-dark fs-4 pb-0 menu-item', title:'Home' },
+  { name: <FcBusinessman />, href: '/about', current: false, style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'About' },
+  { name: <FcMindMap />, href: '#', current: false,style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'Projects' },
+  { name: <FcPositiveDynamic />, href: '/services', current: false, style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'Services' },
+  { name: <FcCustomerSupport />, href: '/contact', current: false, style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'Contact' },
 ]
 
 const social_navigation = [
@@ -21,7 +23,6 @@ const social_navigation = [
   { name: <FaGithubAlt className='github social-icon' />, href: '#', current: false, style: 'text-dark fs-5' },
   { name: <BsMoonStarsFill />, href: '#', current: false, style: 'text-dark fs-5 rounded-circle moonstar' },
 ]
-
 
 
 const NavbarMenu = () => {
@@ -38,7 +39,7 @@ const NavbarMenu = () => {
                 navigation.map((n,i)=>{
                   return(
                     <>
-                      <Nav.Link key={i} href={n.href} className={n.style}>{n.name}</Nav.Link>
+                      <Nav.Link key={i} href={n.href} className={n.style} title={n.title}>{n.name}</Nav.Link>
                     </>
                   )
                 })

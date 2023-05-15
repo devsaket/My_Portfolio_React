@@ -1,6 +1,8 @@
 import React from 'react'
 import { Container, Row, Col, Button, Card } from 'react-bootstrap'
 
+import {BsChatQuoteFill} from 'react-icons/bs'
+
 const Contact = () => {
   return (
     <>
@@ -12,8 +14,16 @@ const Contact = () => {
               <h1 className='display-1 text-center text-capitalize' style={{ 'font-family': 'Craftsman' }}>Contact Us</h1>
             </Col>
           </Row>
-          <Row>
-            
+          <Row className='text-center'>
+            <Col>
+              <BsChatQuoteFill />
+            </Col>
+            <Col>
+              
+            </Col>
+            <Col>
+              
+            </Col>
           </Row>
         </Container>
       </Container>
