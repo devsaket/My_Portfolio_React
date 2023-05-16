@@ -1,0 +1,14 @@
+.contact-card {
+    user-select: none;
+    box-shadow: 0 7px 7px 5px #43424288;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    overflow: hidden;
+    transition: .5s all;
+
+    &:hover {
+        box-shadow: 0 7px 10px 10px #2c2b2baa;
+        transform: scale(1.015);
+        filter: brightness(1.3);
+    }
+}

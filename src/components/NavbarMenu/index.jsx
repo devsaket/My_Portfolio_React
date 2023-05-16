@@ -1,8 +1,7 @@
 import React from 'react';
 
 import {Container, Nav, Navbar} from 'react-bootstrap';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithubAlt, FaUserClock } from 'react-icons/fa'
-import {MdContactPhone} from 'react-icons/md'
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithubAlt } from 'react-icons/fa'
 import {FcHome, FcBusinessman, FcPositiveDynamic, FcMindMap, FcCustomerSupport} from 'react-icons/fc'
 import { BsMoonStarsFill } from 'react-icons/bs'
 
@@ -29,12 +28,12 @@ const NavbarMenu = () => {
 
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" >
+      <Navbar collapseOnSelect expand="lg" sticky="top" bg="white">
         <Container>
           <Navbar.Brand href="#home" className='d-block d-lg-none'><span className='bg-dark text-light fw-bold rounded-circle nav-brand'>SK</span></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav" className=''>
-            <Nav className="">
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav>
               {
                 navigation.map((n,i)=>{
                   return(
