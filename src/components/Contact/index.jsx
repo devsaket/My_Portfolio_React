@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 
 import { BsChatQuoteFill } from 'react-icons/bs'
 import { MdCall, MdMail } from 'react-icons/md'
+import emailjs from '@emailjs/browser';
 
 import './style.scss'
+import { useRef } from 'react';
 
 const Contact = () => {
+  const form =  useRef();
   const intialValues = { firstName: "", lastName: "", email: "", contact: "", service: "", message: "" };
 
   const [formValues, setFormValues] = useState(intialValues);
@@ -29,16 +32,23 @@ const Contact = () => {
   ]
 
   const submit = () => {
-    console.log(formValues);
+    // console.log(formValues);
+    // console.log(form.current)
 
-
-
+    emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, formValues, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
   };
 
   //input change handler
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
+
+    console.log("Handle Change", formValues)
   };
 
   //form submission handler
@@ -90,6 +100,11 @@ const Contact = () => {
     return errors;
   };
 
+  useEffect(() => {
+    if (Object.keys(formErrors).length === 0 && isSubmitting) {
+      submit();
+    }
+  }, [formErrors]);
 
   return (
     <>
@@ -97,7 +112,7 @@ const Contact = () => {
         <Container>
           <Row className='py-4'>
             <Col>
-              <p className='fs-2 text-center mt-3 my-0'>We love to Talk</p>
+              <p className='fs-2 text-center mt-3 my-0'> I love to discuss your idea</p>
               <h1 className='display-1 text-center text-capitalize' style={{ fontFamily: 'Craftsman' }}>Contact Us</h1>
             </Col>
           </Row>
@@ -125,45 +140,45 @@ const Contact = () => {
             <Col md="6" sm="12">
               <h1 className='display-1 text-justify'>Because interactions <br />make things simpler.<br />I'd love to tell more<br />about myself and <br />hear more from you. </h1>
             </Col>
-            <Col md="6" sm="12" className='bg-white p-5'>
+            <Col md="6" sm="12" className='bg-white p-5' style={{}}>
               <p className='fs-3 text-center mt-3'>Fill out the form & I'll be in touch soon!</p>
               <hr />
-              <Form onSubmit={handleSubmit} noValidate>
+              <Form ref={form} onSubmit={handleSubmit} noValidate>
                 <div className='d-flex'>
                   <Form.Group className="mb-3 w-50 me-2" controlId="addCustomer.ControlInput1">
                     <Form.Label className='fs-4'>FirstName</Form.Label>
-                    <Form.Control type="text" name="firstName" placeholder="James" value={formValues.firstName} onChange={handleChange} className={formErrors.firstName && "input-error"} />
+                    <Form.Control type="text" name="firstName" placeholder="James" value={formValues.firstName} onChange={handleChange} className={formErrors.firstName && "input-error"} style={{ fontFamily: 'monospace' }} />
                     {formErrors.firstName && (<span className="error text-danger">{formErrors.firstName}</span>)}
                   </Form.Group>
 
                   <Form.Group className="mb-3 w-50" controlId="addCustomer.ControlInput2">
                     <Form.Label className='fs-4'>LastName</Form.Label>
-                    <Form.Control type="text" name="lastName" placeholder="Bond" value={formValues.lastName} onChange={handleChange} className={formErrors.lastName && "input-error"} />
+                    <Form.Control type="text" name="lastName" placeholder="Bond" value={formValues.lastName} onChange={handleChange} className={formErrors.lastName && "input-error"} style={{ fontFamily: 'monospace' }} />
                     {formErrors.lastName && (<span className="error text-danger">{formErrors.lastName}</span>)}
                   </Form.Group>
                 </div>
 
                 <Form.Group className="mb-3" controlId="addCustomer.ControlInput3">
                   <Form.Label className='fs-4'>Email Address</Form.Label>
-                  <Form.Control type="email" name="email" placeholder="name@example.com" value={formValues.email} onChange={handleChange} className={formErrors.email && "input-error"} />
+                  <Form.Control type="email" name="email" placeholder="name@example.com" value={formValues.email} onChange={handleChange} className={formErrors.email && "input-error"} style={{ fontFamily: 'monospace' }} />
                   {formErrors.email && (<span className="error text-danger">{formErrors.email}</span>)}
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="addCustomer.ControlInput4">
                   <Form.Label className='fs-4'>Contact</Form.Label>
-                  <Form.Control type="text" name="contact" placeholder="9874563210" value={formValues.contact} onChange={handleChange} className={formErrors.contact && "input-error"} />
+                  <Form.Control type="text" name="contact" placeholder="9874563210" value={formValues.contact} onChange={handleChange} className={formErrors.contact && "input-error"} style={{ fontFamily: 'monospace' }} />
                   {formErrors.contact && (<span className="error text-danger">{formErrors.contact}</span>)}
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="addCustomer.ControlInput5">
                   <Form.Label className='fs-4'>Select Service</Form.Label>
-                  <Form.Select name="service" value={formValues.service} onChange={handleChange} className={formErrors.service && "input-error"}>
-                    <option>Services Interested</option>
+                  <Form.Select name="service" value={formValues.service} onChange={handleChange} className={formErrors.service && "input-error"} style={{ fontFamily: 'monospace' }}>
+                    <option value="">Services Interested</option>
                     {
-                      servicesObj.map((i) => {
+                      servicesObj.map((i,j) => {
                         return (
                           <>
-                            <option value={i.name}>{i.serviceName}</option>
+                            <option key={(j+1).toString()} value={i.name}>{i.serviceName}</option>
                           </>
                         );
                       })
@@ -174,7 +189,7 @@ const Contact = () => {
 
                 <Form.Group className="mb-3" controlId="addCustomer.ControlInput6">
                   <Form.Label className='fs-4'>Describe Your Project</Form.Label>
-                  <Form.Control as="textarea" name="message" rows="5" placeholder="Place Your Message Here . . ." value={formValues.message} onChange={handleChange} className={formErrors.message && "input-error"} />
+                  <Form.Control as="textarea" name="message" rows="5" placeholder="Place Your Message Here . . ." value={formValues.message} onChange={handleChange} className={formErrors.message && "input-error"} style={{ fontFamily: 'monospace' }} />
                   {formErrors.message && (<span className="error text-danger">{formErrors.message}</span>)}
                 </Form.Group>
                 <Form.Group className="mb-3 text-end">
