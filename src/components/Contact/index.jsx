@@ -10,9 +10,9 @@ import { useRef } from 'react';
 
 const Contact = () => {
   const form =  useRef();
-  const intialValues = { firstName: "", lastName: "", email: "", contact: "", service: "", message: "" };
+  const initialValues = { firstName: "", lastName: "", email: "", contact: "", service: "", message: "" };
 
-  const [formValues, setFormValues] = useState(intialValues);
+  const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
