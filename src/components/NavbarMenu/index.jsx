@@ -8,11 +8,11 @@ import { BsMoonStarsFill } from 'react-icons/bs'
 import './style.scss'
 
 const navigation = [
-  { name: <FcHome />, href: 'My_Portfolio_React/', current: true, style: 'text-dark border-bottom border-dark fs-4 pb-0 menu-item', title:'Home' },
-  { name: <FcBusinessman />, href: 'My_Portfolio_React/about', current: false, style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'About' },
+  { name: <FcHome />, href: '/My_Portfolio_React/', current: true, style: 'text-dark border-bottom border-dark fs-4 pb-0 menu-item', title:'Home' },
+  { name: <FcBusinessman />, href: '/My_Portfolio_React/about', current: false, style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'About' },
   { name: <FcMindMap />, href: '#', current: false,style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'Projects' },
-  { name: <FcPositiveDynamic />, href: 'My_Portfolio_React/services', current: false, style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'Services' },
-  { name: <FcCustomerSupport />, href: 'My_Portfolio_React/contact', current: false, style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'Contact' },
+  { name: <FcPositiveDynamic />, href: '/My_Portfolio_React/services', current: false, style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'Services' },
+  { name: <FcCustomerSupport />, href: '/My_Portfolio_React/contact', current: false, style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'Contact' },
 ]
 
 const social_navigation = [

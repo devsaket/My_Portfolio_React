@@ -24,11 +24,11 @@ function App() {
 
       {loading ? <Loading /> : <>
         <NavbarMenu />
-        <Routes basename="My_Portfolio_React">
-          <Route  exact path='My_Portfolio_React/' element={<Header />} /> 
-          <Route  exact path='My_Portfolio_React/about' element={<About />} /> 
-          <Route  exact path='My_Portfolio_React/services' element={<Services />} /> 
-          <Route  exact path='My_Portfolio_React/contact' element={<Contact />} /> 
+        <Routes basename="/My_Portfolio_React/">
+          <Route  exact path='/My_Portfolio_React/' element={<Header />} /> 
+          <Route  exact path='/My_Portfolio_React/about' element={<About />} /> 
+          <Route  exact path='/My_Portfolio_React/services' element={<Services />} /> 
+          <Route  exact path='/My_Portfolio_React/contact' element={<Contact />} /> 
         </Routes>
 
         <Footer />
