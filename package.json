@@ -1,8 +1,8 @@
 {
   "name": "my_react_portfolio",
+  "homepage": "https://devsaket.github.io/My_Portfolio_React/", 
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://devsaket.github.io/My_Portfolio_React", 
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@testing-library/jest-dom": "^5.16.5",

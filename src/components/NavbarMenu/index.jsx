@@ -8,11 +8,11 @@ import { BsMoonStarsFill } from 'react-icons/bs'
 import './style.scss'
 
 const navigation = [
-  { name: <FcHome />, href: '/', current: true, style: 'text-dark border-bottom border-dark fs-4 pb-0 menu-item', title:'Home' },
-  { name: <FcBusinessman />, href: '/about', current: false, style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'About' },
+  { name: <FcHome />, href: 'My_Portfolio_React/', current: true, style: 'text-dark border-bottom border-dark fs-4 pb-0 menu-item', title:'Home' },
+  { name: <FcBusinessman />, href: 'My_Portfolio_React/about', current: false, style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'About' },
   { name: <FcMindMap />, href: '#', current: false,style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'Projects' },
-  { name: <FcPositiveDynamic />, href: '/services', current: false, style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'Services' },
-  { name: <FcCustomerSupport />, href: '/contact', current: false, style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'Contact' },
+  { name: <FcPositiveDynamic />, href: 'My_Portfolio_React/services', current: false, style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'Services' },
+  { name: <FcCustomerSupport />, href: 'My_Portfolio_React/contact', current: false, style: 'text-dark fs-4 ms-1 pb-0 menu-item', title:'Contact' },
 ]
 
 const social_navigation = [
@@ -30,7 +30,7 @@ const NavbarMenu = () => {
     <>
       <Navbar collapseOnSelect expand="lg" sticky="top" bg="white">
         <Container>
-          <Navbar.Brand href="#home" className='d-block d-lg-none'><span className='bg-dark text-light fw-bold rounded-circle nav-brand'>SK</span></Navbar.Brand>
+          <Navbar.Brand href="My_Portfolio_React/" className='d-block d-lg-none'><span className='bg-dark text-light fw-bold rounded-circle nav-brand'>SK</span></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav>
@@ -44,7 +44,7 @@ const NavbarMenu = () => {
                 })
               }
             </Nav>
-            <Navbar.Brand href="#home" className='d-none d-lg-block mx-auto'><span className='bg-dark text-light fw-bold rounded-circle nav-brand'>SK</span></Navbar.Brand>
+            <Navbar.Brand href="My_Portfolio_React/" className='d-none d-lg-block mx-auto'><span className='bg-dark text-light fw-bold rounded-circle nav-brand'>SK</span></Navbar.Brand>
             <Nav className="">
               {
                 social_navigation.map((n,i)=>{
