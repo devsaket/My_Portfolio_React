@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://devsaket.github.io/My_Portfolio_React/static/css/main.df9a499a.css",
-    "main.js": "https://devsaket.github.io/My_Portfolio_React/static/js/main.eb30611d.js",
+    "main.js": "https://devsaket.github.io/My_Portfolio_React/static/js/main.2970f6e6.js",
     "static/js/787.56d9acf9.chunk.js": "https://devsaket.github.io/My_Portfolio_React/static/js/787.56d9acf9.chunk.js",
     "static/media/Craftsman.ttf": "https://devsaket.github.io/My_Portfolio_React/static/media/Craftsman.cf0743cb27551679a26c.ttf",
     "static/media/BlackJack.ttf": "https://devsaket.github.io/My_Portfolio_React/static/media/BlackJack.d2f7d54a0f5690b35af3.ttf",
@@ -12,11 +12,11 @@
     "static/media/training.png": "https://devsaket.github.io/My_Portfolio_React/static/media/training.e7b0edc541b0ede5c9eb.png",
     "index.html": "https://devsaket.github.io/My_Portfolio_React/index.html",
     "main.df9a499a.css.map": "https://devsaket.github.io/My_Portfolio_React/static/css/main.df9a499a.css.map",
-    "main.eb30611d.js.map": "https://devsaket.github.io/My_Portfolio_React/static/js/main.eb30611d.js.map",
+    "main.2970f6e6.js.map": "https://devsaket.github.io/My_Portfolio_React/static/js/main.2970f6e6.js.map",
     "787.56d9acf9.chunk.js.map": "https://devsaket.github.io/My_Portfolio_React/static/js/787.56d9acf9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df9a499a.css",
-    "static/js/main.eb30611d.js"
+    "static/js/main.2970f6e6.js"
   ]
 }
