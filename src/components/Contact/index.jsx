@@ -113,7 +113,7 @@ const Contact = () => {
           <Row className='py-4'>
             <Col>
               <p className='fs-2 text-center mt-3 my-0'> I love to discuss your idea</p>
-              <h1 className='display-1 text-center text-capitalize' style={{ fontFamily: 'Craftsman' }}>Contact Us</h1>
+              <h1 className='display-1 text-center text-capitalize' style={{ fontFamily: 'Craftsman' }}>Contact Me</h1>
             </Col>
           </Row>
           <Row className='text-center my-4 d-flex justify-content-center'>
