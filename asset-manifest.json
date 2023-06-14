@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "https://devsaket.github.io/My_Portfolio_React/static/css/main.df9a499a.css",
+    "main.js": "https://devsaket.github.io/My_Portfolio_React/static/js/main.eb30611d.js",
+    "static/js/787.56d9acf9.chunk.js": "https://devsaket.github.io/My_Portfolio_React/static/js/787.56d9acf9.chunk.js",
+    "static/media/Craftsman.ttf": "https://devsaket.github.io/My_Portfolio_React/static/media/Craftsman.cf0743cb27551679a26c.ttf",
+    "static/media/BlackJack.ttf": "https://devsaket.github.io/My_Portfolio_React/static/media/BlackJack.d2f7d54a0f5690b35af3.ttf",
+    "static/media/SKProfilePicture.jpg": "https://devsaket.github.io/My_Portfolio_React/static/media/SKProfilePicture.41feeb8e67c473f1cd96.jpg",
+    "static/media/myphoto.png": "https://devsaket.github.io/My_Portfolio_React/static/media/myphoto.b6047745468d652890a9.png",
+    "static/media/Quebecks.ttf": "https://devsaket.github.io/My_Portfolio_React/static/media/Quebecks.22e519884f30007292d0.ttf",
+    "static/media/logodesign.png": "https://devsaket.github.io/My_Portfolio_React/static/media/logodesign.55ca8e92cb54d72a219b.png",
+    "static/media/training.png": "https://devsaket.github.io/My_Portfolio_React/static/media/training.e7b0edc541b0ede5c9eb.png",
+    "index.html": "https://devsaket.github.io/My_Portfolio_React/index.html",
+    "main.df9a499a.css.map": "https://devsaket.github.io/My_Portfolio_React/static/css/main.df9a499a.css.map",
+    "main.eb30611d.js.map": "https://devsaket.github.io/My_Portfolio_React/static/js/main.eb30611d.js.map",
+    "787.56d9acf9.chunk.js.map": "https://devsaket.github.io/My_Portfolio_React/static/js/787.56d9acf9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df9a499a.css",
+    "static/js/main.eb30611d.js"
+  ]
+}
